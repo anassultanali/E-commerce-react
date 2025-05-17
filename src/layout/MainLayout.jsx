@@ -5,6 +5,7 @@ import  Auth  from './../pages/auth/Auth';
 import  Login  from './../pages/auth/Login/Login';
 import  Register  from './../pages/auth/Register/Register';
 import  Error  from './../pages/Error/Error';
+import AuthCheck from "../AuthCheck/AuthCheck";
   
 const MainLayout = () => {
     return(
@@ -13,7 +14,11 @@ const MainLayout = () => {
         <Navbar/>
 
         <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={
+                <AuthCheck>    
+                    <Home />
+                </AuthCheck> 
+                } />
             <Route path="auth" element={<Auth />}>
                 <Route path="Login" element={<Login/>} />
                 <Route path="Register" element={<Register/>} />
