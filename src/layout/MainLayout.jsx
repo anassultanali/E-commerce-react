@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import Navbar from './../components/Navbar/Navbar';
-import  Home  from './../pages/home/Home';
-import  Auth  from './../pages/auth/Auth';
-import  Login  from './../pages/auth/Login/Login';
-import  Register  from './../pages/auth/Register/Register';
-import  Error  from './../pages/Error/Error';
+import Navbar from '../components/Navbar/Navbar';
+import  Home  from '../pages/home/Home';
+import  Auth  from '../pages/auth/Auth';
+import  Login  from '../pages/auth/Login/Login';
+import  Register  from '../pages/auth/Register/Register';
+import  Error  from '../pages/Error/Error';
 import AuthCheck from "../AuthCheck/AuthCheck";
   
 const MainLayout = () => {
@@ -16,7 +16,7 @@ const MainLayout = () => {
         <Routes>
             <Route path="/" element={
                 <AuthCheck>    
-                    <Home />
+                    
                 </AuthCheck> 
                 } />
             <Route path="auth" element={<Auth />}>

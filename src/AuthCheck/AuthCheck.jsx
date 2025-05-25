@@ -1,5 +1,6 @@
 import { Navigate, useLocation } from "react-router";
-
+import Home
+ from "../pages/home/Home";
 const AuthCheck = ({childeren}) => {
     
     const isAuthenticate = true ;
@@ -13,7 +14,7 @@ const AuthCheck = ({childeren}) => {
         } />
     }
 
-    return childeren ;
+    return <Home  /> ;
 }
 
 export default AuthCheck ;
